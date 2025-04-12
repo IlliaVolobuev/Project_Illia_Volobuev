@@ -1,425 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Інтернет-магазин кавових напоїв Drink2Go: найкраща кава з доставкою по Україні." />
-    <meta name="keywords" content="кава, інтернет-магазин, Drink2Go, напої, декаф, доставка кави" />
-    <meta name="author" content="Drink2Go" />
-    <title>Drink2Go – Інтернет-магазин кавових напоїв</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/index.js" defer></script>
-  </head>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Інтернет-магазин кавових напоїв Drink2Go: найкраща кава з доставкою по Україні.">
+  <meta name="keywords" content="кава, інтернет-магазин, Drink2Go, напої, декаф, доставка кави">
+  <meta name="author" content="Drink2Go">
+  <title>Drink2Go – Інтернет-магазин кавових напоїв</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/index.js" defer></script>
+</head>
 <body>
-  <div class="desktop-1440-px">
-    <div class="footer">
-      <div class="div">РОЗРОБНИК</div>
-      <div class="phone">
-        <div class="_7-999-999-99-99">+380 98 177 44</div>
-        <img class="icons-logo-phone" src="./img/icons-logo-phone0.svg" />
-      </div>
-      <div class="address">
-        <div class="_5">Запоріжжя, Дубовий гай, вулиця Глісерна, 1 .</div>
-        <img class="icons-logo-address" src="./img/icons-logo-address0.svg" />
-      </div>
-      <div class="text-heading-4">
-        <div class="div2">Контакти</div>
-      </div>
-      <div class="navigation-footer-link">
-        <div class="div3">Блог</div>
-      </div>
-      <div class="text-heading-42">
-        <div class="div2">Медіа</div>
-      </div>
-      <div class="div4">
-        <div class="div3">Каталог</div>
-      </div>
-      <div class="navigation-footer-link2">
-        <div class="div3">Доставка</div>
-      </div>
-      <div class="navigation-footer-link3"></div>
-      <div class="navigation-footer-link4"></div>
-      <div class="text-heading-43">
-        <div class="div2">Інтернет-магазин</div>
-      </div>
-      <div class="buttons-social">
-        <div class="icons-logo-ok"></div>
-      </div>
-      <div class="buttons-social2">
-        <img class="icons-logo-pinterest" src="./img/icons-logo-pinterest0.svg" />
-      </div>
-      <div class="buttons-social3">
-        <div class="icons-logo-vk"></div>
-      </div>
-      <div class="div5">Інтернет-магазин кавових напоїв</div>
-      <div class="icons-logo-logo-drink-2-go">
-        <div class="go">go</div>
-        <img class="_2" src="./img/_20.svg" />
-        <div class="drink">Drink</div>
-      </div>
+  <header class="header">
+    <div class="header-logo">
+      <span class="logo-drink">Drink</span>
+      <img src="./img/_21.svg" alt="Logo" class="logo-icon">
+      <span class="logo-go">go</span>
     </div>
-    <div class="map">
-      <img class="map-bg" src="./img/map-bg0.png" />
-      <img class="icons-logo-map-pin" src="./img/icons-logo-map-pin0.svg" />
-    </div>
-    <img class="image-1" src="./img/image-10.png" />
-    <div class="slider">
-      <div class="rectangle-20"></div>
-      <div class="text-badge">
-        <div class="div6">Новинка!</div>
-      </div>
-      <div class="text-slider-heading">
-        <div class="div7">Декаф Флет Уайт</div>
-      </div>
-      <div class="text-slider-description">
-        <div class="div8">
+    <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
+    <nav class="header-nav">
+      <a href="#" class="nav-link active">Головна</a>
+      <a href="#" class="nav-link">Каталог</a>
+      <a href="#" class="nav-link">Доставка</a>
+      <a href="#" class="nav-link">Про нас</a>
+      <a href="#" class="nav-link account-link">
+        <img src="./img/user0.svg" alt="Увійти"> Увійти
+      </a>
+      <a href="#" class="nav-link basket-link">
+        <img src="./img/union0.svg" alt="Кошик"> Кошик
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="slider">
+      <img src="./img/flat-white-img0.png" alt="Декаф Флет Уайт" class="slider-image">
+      <div class="slider-content">
+        <span class="badge">Новинка!</span>
+        <h1 class="slider-title">Декаф Флет Уайт</h1>
+        <p class="slider-description">
           Свіжозварена кава без кофеїну з Ефіопії з натуральним фермерським
           молоком - те, що потрібно для розслаблення після важкого робочого дня
+        </p>
+        <div class="price-container">
+          <span class="old-price">295грн</span>
+          <span class="current-price">225грн</span>
+        </div>
+        <button class="buy-button">Придбати</button>
+      </div>    
+    </section>
+
+    <section class="features">
+      <span class="section-badge">Переваги</span>
+      <h2 class="section-title">Головні причини обрати Drink2Go</h2>
+      
+      <div class="features-grid">
+        <div class="feature">
+          <img src="./img/icon3.svg" alt="Швидкість" class="feature-icon">
+          <h3 class="feature-title">Швидкість</h3>
+          <p class="feature-description">Готовий напій завжди під рукою — просто відкрий банку</p>
+        </div>
+        
+        <div class="feature">
+          <img src="./img/icon2.svg" alt="Зручність" class="feature-icon">
+          <h3 class="feature-title">Зручність</h3>
+          <p class="feature-description">Легко поміщаєтьс в кишеню і в маленьку сумочку</p>
+        </div>
+        
+        <div class="feature">
+          <img src="./img/icon1.svg" alt="Бадьорість" class="feature-icon">
+          <h3 class="feature-title">Бадьорість</h3>
+          <p class="feature-description">Збалансована доза кофеїну дасть потужний заряд енегрії</p>
+        </div>
+        
+        <div class="feature">
+          <img src="./img/icon0.svg" alt="Екологічність" class="feature-icon">
+          <h3 class="feature-title">Екологічність</h3>
+          <p class="feature-description">Вся упаковка зроблена з матеріалів, що переробляються</p>
         </div>
       </div>
-      <div class="images-slider-image-flat-white">
-        <img class="flat-white-img" src="./img/flat-white-img0.png" />
-      </div>
-    </div>
-    <div class="buttons-slider-button">
-      <div class="div9">Придбати</div>
-    </div>
-    <div class="text-price">
-      <div class="_225">225грн</div>
-    </div>
-    <div class="text-slider-old-price">
-      <div class="_295">295грн</div>
-    </div>
-    <div class="header">
-      <div class="bg"></div>
-      <div class="navigation-basket">
-        <img class="union" src="./img/union0.svg" />
-        <div class="div3">КОШИК</div>
-      </div>
-      <div class="navigation-account">
-        <img class="user" src="./img/user0.svg" />
-        <div class="div3">УВІЙТИ</div>
-      </div>
-      <div class="navigation-nav-links">
-        <div class="div3">ПРО нас</div>
-      </div>
-      <div class="navigation-nav-links2">
-        <div class="div3">Доставка</div>
-      </div>
-      <div class="navigation-nav-links3">
-        <div class="div3">Каталог</div>
-      </div>
-      <div class="navigation-nav-links4">
-        <div class="div10">ГОЛОВНА</div>
-        <div class="rectangle-130"></div>
-      </div>
-      <div class="div11">
-        Інтернет-магазин
-        <br />
-        кавових напоїв
-      </div>
-      <div class="icons-logo-logo-drink-2-go2">
-        <div class="go">go</div>
-        <img class="_22" src="./img/_21.svg" />
-        <div class="drink">Drink</div>
-      </div>
-    </div>
-    <div class="catalog">
-      <div class="bg2"></div>
-      <div class="filter-sort-pagination">
-        <div class="buttons-secondary-button">
-          <div class="div12">Назад</div>
-        </div>
-        <div class="buttons-page-button">
-          <div class="_1">1</div>
-        </div>
-        <div class="buttons-page-button2">
-          <div class="_23">2</div>
-        </div>
-        <div class="buttons-page-button">
-          <div class="_3">3</div>
-        </div>
-        <div class="buttons-secondary-button">
-          <div class="div12">Вперед</div>
-        </div>
-      </div>
-      <div class="cards-list">
-        <div class="card">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog-header">
+        <span class="section-badge">Каталог</span>
+        <h2 class="section-title">Каталог кавових напоїв</h2>
+        
+        <div class="sort-container">
+          <span class="sort-label">Сортування:</span>
+          <div class="sort-select">
+            <span>за замовчуванням</span>
+            <img src="./img/frame-940.svg" alt="Сортування">
           </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union2" src="./img/union1.svg" />
-            <div class="div13">В кошик</div>
+        </div>
+      </div>
+
+      <div class="filter-container">
+        <div class="filter-section">
+          <h3 class="filter-title">Ціна</h3>
+          <div class="price-range">
+            <input type="text" class="price-input" value="0">
+            <span class="price-separator">-</span>
+            <input type="text" class="price-input" value="900">
           </div>
-          <div class="div14">
+          <div class="range-slider">
+            <div class="slider-track"></div>
+            <div class="slider-thumb"></div>
+            <div class="slider-thumb"></div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3 class="filter-title">Наявність молока</h3>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="milk" checked>
+              <span class="radio-custom"></span>
+              <span>Неважливо</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="milk">
+              <span class="radio-custom"></span>
+              <span>Тільки тваринне</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="milk">
+              <span class="radio-custom"></span>
+              <span>Только рослинне</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="milk">
+              <span class="radio-custom"></span>
+              <span>Без молока</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3 class="filter-title">Країна зростання</h3>
+          <div class="checkbox-group">
+            <label class="checkbox-option">
+              <input type="checkbox" checked>
+              <span class="checkbox-custom"></span>
+              <span>Бразилія</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox">
+              <span class="checkbox-custom"></span>
+              <span>Ефіопія</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox">
+              <span class="checkbox-custom"></span>
+              <span>Колумбія</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox">
+              <span class="checkbox-custom"></span>
+              <span>Коста-Ріка</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox">
+              <span class="checkbox-custom"></span>
+              <span>Перу</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="secondary-button">Скинути</button>
+          <button class="primary-button">Застосувати</button>
+        </div>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
             Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-6" src="./img/coffee-can-60.png" />
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
           </div>
         </div>
-        <div class="card2">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
-          </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union3" src="./img/union2.svg" />
-            <div class="div13">В кошик</div>
-          </div>
-          <div class="div14">
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
             Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-5" src="./img/coffee-can-50.png" />
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
           </div>
         </div>
-        <div class="card3">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
-          </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union4" src="./img/union3.svg" />
-            <div class="div13">В кошик</div>
-          </div>
-          <div class="div14">
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
             Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-4" src="./img/coffee-can-40.png" />
-          </div>
-        </div>
-        <div class="card4">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
-          </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union5" src="./img/union4.svg" />
-            <div class="div13">В кошик</div>
-          </div>
-          <div class="div14">
-            Кава без кофеїну з Ефіопії з натуральним фрмерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-3" src="./img/coffee-can-30.png" />
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
           </div>
         </div>
-        <div class="card5">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
-          </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union6" src="./img/union5.svg" />
-            <div class="div13">В кошик</div>
-          </div>
-          <div class="div14">
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
             Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-2" src="./img/coffee-can-20.png" />
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
           </div>
         </div>
-        <div class="card6">
-          <div class="card-bg"></div>
-          <div class="text-price2">
-            <div class="_225">225грн</div>
-          </div>
-          <div class="buttons-add-to-cart-button">
-            <img class="union7" src="./img/union6.svg" />
-            <div class="div13">В кошик</div>
-          </div>
-          <div class="div14">
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
             Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </div>
-          <div class="text-heading-3">
-            <div class="div15">Декаф Флет Уайт</div>
-          </div>
-          <div class="images-item-photo">
-            <img class="coffee-can-1" src="./img/coffee-can-10.png" />
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
           </div>
         </div>
+        <div class="product-card">
+          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+          <h3 class="product-title">Декаф Флет Уайт</h3>
+          <p class="product-description">
+            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+          </p>
+          <div class="product-footer">
+            <span class="product-price">225грн</span>
+            <button class="add-to-cart">
+              <img src="./img/union6.svg" alt="Додати в кошик">
+              <span>В кошик</span>
+            </button>
+          </div>
+        </div>
+
+      <div class="pagination">
+        <button class="secondary-button">Назад</button>
+        <div class="page-numbers">
+          <button class="page-button active">1</button>
+          <button class="page-button">2</button>
+          <button class="page-button">3</button>
+        </div>
+        <button class="secondary-button">Вперед</button>
       </div>
-      <div class="filter-sort-sorting">
-        <div class="div16">за замовчуванням</div>
-        <img class="frame-94" src="./img/frame-940.svg" />
-      </div>
-      <div class="text-label">
-        <div class="div17">Сортування:</div>
-      </div>
-      <div class="text-heading-2">
-        <div class="div18">Каталог кавових напоїв</div>
-      </div>
-      <div class="text-badge2">
-        <div class="div6">Каталог</div>
-      </div>
-      <div class="filter">
-        <div class="buttons">
-          <div class="buttons-filter-button">
-            <div class="div9">Застосувати</div>
-          </div>
-          <div class="buttons-secondary-button2">
-            <div class="div12">Скинути</div>
-          </div>
-        </div>
-        <div class="filter-sort-checkbox">
-          <div class="toggle">
-            <div class="rectangle-96"></div>
-            <div class="ellipse-17"></div>
-          </div>
-          <div class="div19">Перу</div>
-        </div>
-        <div class="filter-sort-checkbox2">
-          <div class="toggle">
-            <div class="rectangle-962"></div>
-            <div class="ellipse-172"></div>
-          </div>
-          <div class="div20">Коста-Ріка</div>
-        </div>
-        <div class="filter-sort-checkbox3">
-          <div class="toggle">
-            <div class="rectangle-962"></div>
-            <div class="ellipse-172"></div>
-          </div>
-          <div class="div20">Колумбія</div>
-        </div>
-        <div class="filter-sort-checkbox4">
-          <div class="toggle">
-            <div class="rectangle-962"></div>
-            <div class="ellipse-172"></div>
-          </div>
-          <div class="div20">Ефіопія</div>
-        </div>
-        <div class="filter-sort-checkbox5">
-          <div class="toggle">
-            <div class="rectangle-963"></div>
-            <div class="ellipse-173"></div>
-          </div>
-          <div class="div20">Бразилія</div>
-        </div>
-        <div class="text-label2">
-          <div class="div17">Країна зростання</div>
-        </div>
-        <div class="filter-sort-radio">
-          <div class="radio">
-            <div class="ellipse-15"></div>
-          </div>
-          <div class="div19">Без молока</div>
-        </div>
-        <div class="filter-sort-radio2">
-          <div class="radio">
-            <div class="ellipse-152"></div>
-          </div>
-          <div class="div20">Только рослинне</div>
-        </div>
-        <div class="filter-sort-radio3">
-          <div class="radio">
-            <div class="ellipse-152"></div>
-          </div>
-          <div class="div20">Тільки тваринне</div>
-        </div>
-        <div class="filter-sort-radio4">
-          <div class="radio">
-            <div class="ellipse-153"></div>
-            <div class="ellipse-16"></div>
-          </div>
-          <div class="div20">Неважливо</div>
-        </div>
-        <div class="text-label3">
-          <div class="div17">Наявність молока</div>
-        </div>
-        <div class="filter-sort-input">
-          <div class="_123">900</div>
-        </div>
-        <img class="vector-10-stroke" src="./img/vector-10-stroke0.svg" />
-        <div class="filter-sort-input2">
-          <div class="_0">0</div>
-        </div>
-        <div class="filter-sort-range">
-          <div class="rectangle-89"></div>
-          <div class="rectangle-88"></div>
-          <div class="ellipse-13"></div>
-          <div class="ellipse-14"></div>
-        </div>
-        <div class="text-label4">
-          <div class="div17">Ціна</div>
-        </div>
-      </div>
+    </section>
+
+    <div class="map-container">
+      <img src="./img/map-bg0.png" alt="Магазин на карті" class="map-image">
+      <img src="./img/icons-logo-map-pin0.svg" alt="Маркер" class="map-marker">
     </div>
-    <div class="features">
-      <div class="bg3"></div>
-      <div class="div21">
-        Вся упаковка зроблена з матеріалів, що переробляються
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-drink">Drink</span>
+        <img src="./img/_20.svg" alt="Logo" class="logo-icon">
+        <span class="logo-go">go</span>
       </div>
-      <div class="text-heading-32">
-        <div class="div22">Екологічність</div>
+      <p class="footer-description">Інтернет-магазин кавових напоїв</p>
+
+      <div class="footer-sections">
+        <div class="footer-section">
+          <h3 class="footer-title">Інтернет-магазин</h3>
+          <ul class="footer-links">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Блог</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Медіа</h3>
+          <ul class="footer-links">
+            <li><a href="#">Інформація для СМІ</a></li>
+            <li><a href="#">Правова інформація</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Контакти</h3>
+          <div class="contact-info">
+            <img src="./img/icons-logo-address0.svg" alt="Адреса">
+            <p>Запоріжжя, Дубовий гай, вулиця Глісерна, 1</p>
+          </div>
+          <div class="contact-info">
+            <img src="./img/icons-logo-phone0.svg" alt="Телефон">
+            <p>+380 98 177 44</p>
+          </div>
+        </div>
       </div>
-      <div class="icons-logo-features-icon">
-        <img class="icon" src="./img/icon0.svg" />
+
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+        </a>
+        <a href="#" class="social-link">
+          <span class="vk-icon"></span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="ok-icon"></span>
+        </a>
       </div>
-      <div class="div23">
-        Збалансована доза кофеїну дасть потужний заряд енегрії
+
+      <div class="payment-methods">
+        <span>Способи оплати</span>
+        <img src="./img/vector-10.svg" alt="Платежная система">
+        <img src="./img/vector-20.svg" alt="Платежная система">
       </div>
-      <div class="text-heading-33">
-        <div class="div22">Бадьорість</div>
-      </div>
-      <div class="icons-logo-features-icon2">
-        <img class="icon2" src="./img/icon1.svg" />
-      </div>
-      <div class="div24">Легко поміщаєтьс в кишеню і в маленьку сумочку</div>
-      <div class="text-heading-34">
-        <div class="div22">Зручність</div>
-      </div>
-      <div class="icons-logo-features-icon3">
-        <img class="icon3" src="./img/icon2.svg" />
-      </div>
-      <div class="div25">
-        Готовий напій завжди під рукою — просто відкрий банку
-      </div>
-      <div class="text-heading-35">
-        <div class="div22">Швидкість</div>
-      </div>
-      <div class="icons-logo-features-icon4">
-        <img class="icon4" src="./img/icon3.svg" />
-      </div>
-      <div class="text-heading-22">
-        <div class="drink-2-go">Головні причини обрати Drink2Go</div>
-      </div>
-      <div class="text-badge3">
-        <div class="div26">ПЕРЕВАГИ</div>
-      </div>
+
+      <p class="copyright">© Розробник</p>
     </div>
-    <img class="icons-logo-map-pin2" src="./img/icons-logo-map-pin1.svg" />
-    <img class="vector-1" src="./img/vector-10.svg" />
-    <img class="vector-2" src="./img/vector-20.svg" />
-    <div class="div27">СпособИ оплатИ</div>
-    <div class="navigation-footer-link5">
-      <div class="div3">Правовая ІНФОРРМАЦІЯ</div>
-    </div>
-    <div class="navigation-footer-link6">
-      <div class="div3">Інформація для СМІ</div>
-    </div>
-  </div>
-  
+  </footer>
 </body>
 </html>
