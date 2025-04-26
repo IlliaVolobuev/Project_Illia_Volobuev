@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <meta name="description" content="Інтернет-магазин кавових напоїв Drink2Go: найкраща кава з доставкою по Україні.">
   <meta name="keywords" content="кава, інтернет-магазин, Drink2Go, напої, декаф, доставка кави">
   <meta name="author" content="Drink2Go">
@@ -17,19 +18,24 @@
       <span class="logo-drink">Drink</span>
       <img src="./img/_21.svg" alt="Logo" class="logo-icon">
       <span class="logo-go">go</span>
+      
     </div>
     <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
     <nav class="header-nav">
-      <a href="#" class="nav-link active">Головна</a>
-      <a href="#" class="nav-link">Каталог</a>
-      <a href="#" class="nav-link">Доставка</a>
-      <a href="#" class="nav-link">Про нас</a>
-      <a href="#" class="nav-link account-link">
-        <img src="./img/user0.svg" alt="Увійти"> Увійти
-      </a>
-      <a href="#" class="nav-link basket-link">
-        <img src="./img/union0.svg" alt="Кошик"> Кошик
-      </a>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">Головна</a>
+        <a href="#" class="nav-link">Каталог</a>
+        <a href="#" class="nav-link">Доставка</a>
+        <a href="#" class="nav-link">Про нас</a>
+      </div>
+      <div class="nav-icons">
+        <a href="#" class="nav-link account-link">
+          <img src="./img/user0.svg" alt="Увійти"> Увійти
+        </a>
+        <a href="#" class="nav-link basket-link">
+          <img src="./img/union0.svg" alt="Кошик"> Кошик
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -46,8 +52,8 @@
         <div class="price-container">
           <span class="old-price">295грн</span>
           <span class="current-price">225грн</span>
+          <button class="buy-button">Придбати</button>
         </div>
-        <button class="buy-button">Придбати</button>
       </div>    
     </section>
 
@@ -95,178 +101,179 @@
           </div>
         </div>
       </div>
-
-      <div class="filter-container">
-        <div class="filter-section">
-          <h3 class="filter-title">Ціна</h3>
-          <div class="price-range">
-            <input type="text" class="price-input" value="0">
-            <span class="price-separator">-</span>
-            <input type="text" class="price-input" value="900">
+      <div class="catalog-content">
+        <div class="filter-container">
+          <div class="filter-section1">
+            <h3 class="filter-title1">Ціна</h3>
+            <div class="range-slider">
+              <div class="slider-track"></div>
+              <div class="slider-thumb"></div>
+              <div class="slider-thumb"></div>
+            </div>
+            <div class="price-range">
+              <input type="text" class="price-input price-input1" value="0">
+              <span class="price-separator">_</span>
+              <input type="text" class="price-input price-input2" value="900">
+            </div>
           </div>
-          <div class="range-slider">
-            <div class="slider-track"></div>
-            <div class="slider-thumb"></div>
-            <div class="slider-thumb"></div>
+  
+          <div class="filter-section2 ">
+            <h3 class="filter-title2">Наявність молока</h3>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="milk" class="radio-custom" checked>
+                <span class="radio-custom"></span>
+                <span>Неважливо</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="milk">
+                <span class="radio-custom"></span>
+                <span>Тільки тваринне</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="milk">
+                <span class="radio-custom"></span>
+                <span>Только рослинне</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="milk">
+                <span class="radio-custom"></span>
+                <span>Без молока</span>
+              </label>
+            </div>
           </div>
-        </div>
-
-        <div class="filter-section">
-          <h3 class="filter-title">Наявність молока</h3>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="milk" checked>
-              <span class="radio-custom"></span>
-              <span>Неважливо</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="milk">
-              <span class="radio-custom"></span>
-              <span>Тільки тваринне</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="milk">
-              <span class="radio-custom"></span>
-              <span>Только рослинне</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="milk">
-              <span class="radio-custom"></span>
-              <span>Без молока</span>
-            </label>
+  
+          <div class="filter-section3">
+            <h3 class="filter-title3">Країна зростання</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" checked>
+                <span class="checkbox-custom"></span>
+                <span>Бразилія</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox">
+                <span class="checkbox-custom"></span>
+                <span>Ефіопія</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox">
+                <span class="checkbox-custom"></span>
+                <span>Колумбія</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox">
+                <span class="checkbox-custom"></span>
+                <span>Коста-Ріка</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox">
+                <span class="checkbox-custom"></span>
+                <span>Перу</span>
+              </label>
+            </div>
           </div>
-        </div>
-
-        <div class="filter-section">
-          <h3 class="filter-title">Країна зростання</h3>
-          <div class="checkbox-group">
-            <label class="checkbox-option">
-              <input type="checkbox" checked>
-              <span class="checkbox-custom"></span>
-              <span>Бразилія</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox">
-              <span class="checkbox-custom"></span>
-              <span>Ефіопія</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox">
-              <span class="checkbox-custom"></span>
-              <span>Колумбія</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox">
-              <span class="checkbox-custom"></span>
-              <span>Коста-Ріка</span>
-            </label>
-            <label class="checkbox-option">
-              <input type="checkbox">
-              <span class="checkbox-custom"></span>
-              <span>Перу</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="filter-buttons">
-          <button class="secondary-button">Скинути</button>
-          <button class="primary-button">Застосувати</button>
-        </div>
-      </div>
-      <div class="products-grid">
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+  
+          <div class="filter-buttons">
+            <button class="secondary-button">Скинути</button>
+            <button class="primary-button">Застосувати</button>
           </div>
         </div>
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="product-card">
-          <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-          <h3 class="product-title">Декаф Флет Уайт</h3>
-          <p class="product-description">
-            Кава без кофеїну з Ефіопії з натуральним фермерським молоком
-          </p>
-          <div class="product-footer">
-            <span class="product-price">225грн</span>
-            <button class="add-to-cart">
-              <img src="./img/union6.svg" alt="Додати в кошик">
-              <span>В кошик</span>
-            </button>
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
           </div>
+          <div class="product-card">
+            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
+            <h3 class="product-title">Декаф Флет Уайт</h3>
+            <p class="product-description">
+              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+            </p>
+            <div class="product-footer">
+              <span class="product-price">225грн</span>
+              <button class="add-to-cart">
+                <img src="./img/union6.svg" alt="Додати в кошик">
+                <span>В кошик</span>
+              </button>
+            </div>
+          </div>
+  
+        <div class="pagination">
+          <button class="secondary-button">Назад</button>
+          <div class="page-numbers">
+            <button class="page-button active">1</button>
+            <button class="page-button">2</button>
+            <button class="page-button">3</button>
+          </div>
+          <button class="secondary-button">Вперед</button>
         </div>
-
-      <div class="pagination">
-        <button class="secondary-button">Назад</button>
-        <div class="page-numbers">
-          <button class="page-button active">1</button>
-          <button class="page-button">2</button>
-          <button class="page-button">3</button>
-        </div>
-        <button class="secondary-button">Вперед</button>
       </div>
     </section>
 
