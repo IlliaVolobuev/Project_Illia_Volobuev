@@ -10,7 +10,7 @@
   <meta name="author" content="Drink2Go">
   <title>Drink2Go – Інтернет-магазин кавових напоїв</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/index.js" defer></script>
+  <script type="module" src="./js/index.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -29,7 +29,7 @@
         <a href="#" class="nav-link">Про нас</a>
       </div>
       <div class="nav-icons">
-        <a href="#" class="nav-link account-link">
+        <a href="#" class="nav-link account-link forma-login">
           <img src="./img/user0.svg" alt="Увійти"> Увійти
         </a>
         <a href="#" class="nav-link basket-link">
@@ -175,16 +175,17 @@
           </div>
   
           <div class="filter-buttons">
-            <button class="secondary-button">Скинути</button>
             <button class="primary-button">Застосувати</button>
+            <button class="secondary-button">Скинути</button>
           </div>
         </div>
-        <div class="products-grid">
+        <div class="filter-background">
+          <div class="products-grid">
           <div class="product-card">
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -198,7 +199,7 @@
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -212,7 +213,7 @@
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -226,7 +227,7 @@
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -240,7 +241,7 @@
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -254,7 +255,7 @@
             <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
             <h3 class="product-title">Декаф Флет Уайт</h3>
             <p class="product-description">
-              Кава без кофеїну з Ефіопії з натуральним фермерським молоком
+              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
             </p>
             <div class="product-footer">
               <span class="product-price">225грн</span>
@@ -264,17 +265,17 @@
               </button>
             </div>
           </div>
-  
-        <div class="pagination">
+          </div>
+          <div class="pagination">
           <button class="secondary-button">Назад</button>
           <div class="page-numbers">
             <button class="page-button active">1</button>
             <button class="page-button">2</button>
-            <button class="page-button">3</button>
+            <button class="page-button active">3</button>
           </div>
           <button class="secondary-button">Вперед</button>
+          </div>
         </div>
-      </div>
     </section>
 
     <div class="map-container">
@@ -285,27 +286,41 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-logo">
-        <span class="logo-drink">Drink</span>
-        <img src="./img/_20.svg" alt="Logo" class="logo-icon">
-        <span class="logo-go">go</span>
+      <div class="footer-background">
+        <div class="footer-logo">
+            <span class="logo-drink">Drink</span>
+            <img src="./img/_20.svg" alt="Logo" class="logo-icon">
+            <span class="logo-go">go</span>
+        </div>
+        <p class="footer-description">Інтернет-магазин кавових напоїв</p>  
+      <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+            </a>
+            <a href="#" class="social-link">
+              <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+            </a>
+          </div>
       </div>
-      <p class="footer-description">Інтернет-магазин кавових напоїв</p>
-
+      
       <div class="footer-sections">
         <div class="footer-section">
           <h3 class="footer-title">Інтернет-магазин</h3>
           <ul class="footer-links">
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
+            <li><a href="#">Способи оплати</a></li>
             <li><a href="#">Про нас</a></li>
-            <li><a href="#">Блог</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
           <h3 class="footer-title">Медіа</h3>
           <ul class="footer-links">
+            <li><a href="#">Блог</a></li>
             <li><a href="#">Інформація для СМІ</a></li>
             <li><a href="#">Правова інформація</a></li>
           </ul>
@@ -314,36 +329,27 @@
         <div class="footer-section">
           <h3 class="footer-title">Контакти</h3>
           <div class="contact-info">
-            <img src="./img/icons-logo-address0.svg" alt="Адреса">
+            <img src="./img/icons-logo-address0.svg" alt="Адреса" class="contact-icon1">
             <p>Запоріжжя, Дубовий гай, вулиця Глісерна, 1</p>
           </div>
           <div class="contact-info">
-            <img src="./img/icons-logo-phone0.svg" alt="Телефон">
+            <img src="./img/icons-logo-phone0.svg" alt="Телефон" class="contact-icon2">
             <p>+380 98 177 44</p>
           </div>
         </div>
       </div>
-
-      <div class="social-links">
-        <a href="#" class="social-link">
-          <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
-        </a>
-        <a href="#" class="social-link">
-          <span class="vk-icon"></span>
-        </a>
-        <a href="#" class="social-link">
-          <span class="ok-icon"></span>
-        </a>
-      </div>
-
-      <div class="payment-methods">
-        <span>Способи оплати</span>
-        <img src="./img/vector-10.svg" alt="Платежная система">
-        <img src="./img/vector-20.svg" alt="Платежная система">
-      </div>
-
-      <p class="copyright">© Розробник</p>
+      <span class="developer">РОЗРОБНИК</span>
     </div>
   </footer>
+  <div class="frame-1 no-active">
+    <div class="rectangle-1"></div>
+    <div class="div">Увійти</div>
+    <div class="rectangle-4"></div>
+    <div class="div2">Логін</div>
+    <div class="rectangle-42"></div>
+    <div class="div3">Пароль</div>
+    <div class="rectangle-43"></div>
+    <div class="div4">Логін</div>
+  </div>  
 </body>
 </html>
