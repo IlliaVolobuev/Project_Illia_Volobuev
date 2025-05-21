@@ -23,10 +23,10 @@
     <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
     <nav class="header-nav">
       <div class="nav-links">
-        <a href="#" class="nav-link active">Головна</a>
-        <a href="#" class="nav-link">Каталог</a>
-        <a href="#" class="nav-link">Доставка</a>
-        <a href="#" class="nav-link">Про нас</a>
+        <a href="#" class="nav-link">Головна</a>
+        <a href="#catalog" class="nav-link">Каталог</a>
+        <a href="#map" class="nav-link">Доставка</a>
+        <a href="#footer" class="nav-link">Про нас</a>
       </div>
       <div class="nav-icons">
         <a href="#" class="nav-link account-link forma-login">
@@ -88,7 +88,7 @@
       </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="catalog-header">
         <span class="section-badge">Каталог</span>
         <h2 class="section-title">Каталог кавових напоїв</h2>
@@ -103,20 +103,23 @@
       </div>
       <div class="catalog-content">
         <div class="filter-container">
-          <div class="filter-section1">
-            <h3 class="filter-title1">Ціна</h3>
-            <div class="range-slider">
-              <div class="slider-track"></div>
-              <div class="slider-thumb"></div>
-              <div class="slider-thumb"></div>
-            </div>
-            <div class="price-range">
-              <input type="text" class="price-input price-input1" value="0">
-              <span class="price-separator">_</span>
-              <input type="text" class="price-input price-input2" value="900">
-            </div>
-          </div>
-  
+<div class="filter-section1">
+  <h3 class="filter-title1">Ціна</h3>
+  <div class="range-wrapper">
+    <div class="range-base"></div>
+    <div class="range-active" id="range-active"></div>
+    <input type="range" min="0" max="900" value="0" id="min-range" class="range-input">
+    <input type="range" min="0" max="900" value="900" id="max-range" class="range-input">
+  </div>
+
+  <div class="price-range">
+    <input type="number" class="price-input" id="min-price" value="0">
+    <span class="price-separator">_</span>
+    <input type="number" class="price-input" id="max-price" value="900">
+  </div>
+</div>
+
+
           <div class="filter-section2 ">
             <h3 class="filter-title2">Наявність молока</h3>
             <div class="radio-group">
@@ -278,13 +281,11 @@
         </div>
     </section>
 
-    <div class="map-container">
-      <img src="./img/map-bg0.png" alt="Магазин на карті" class="map-image">
-      <img src="./img/icons-logo-map-pin0.svg" alt="Маркер" class="map-marker">
-    </div>
+    <div class="map-container" id="map">
+      <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17034.964372251736!2d18.591694718969315!3d54.40829767875458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd75907cf29c17%3A0x22ec58915629e7ab!2sOlivia%20Star!5e0!3m2!1sru!2spl!4v1747475207714!5m2!1sru!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-content">
       <div class="footer-background">
         <div class="footer-logo">
@@ -295,13 +296,13 @@
         <p class="footer-description">Інтернет-магазин кавових напоїв</p>  
       <div class="social-links">
             <a href="#" class="social-link">
-              <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+              <img src="./img/vk_gray.svg" alt="Pinterest">
             </a>
             <a href="#" class="social-link">
               <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
             </a>
             <a href="#" class="social-link">
-              <img src="./img/icons-logo-pinterest0.svg" alt="Pinterest">
+              <img src="./img/odn_gray.svg" alt="Pinterest">
             </a>
           </div>
       </div>
@@ -338,7 +339,7 @@
           </div>
         </div>
       </div>
-      <span class="developer">РОЗРОБНИК</span>
+      <div class="developer"><span>Разработано в HTML Academy</span><img src="./img/State=Grey.svg" class="logo_HTML_Academy"></div>
     </div>
   </footer>
   <div class="frame-1 no-active">
@@ -350,6 +351,9 @@
     <div class="div3">Пароль</div>
     <div class="rectangle-43"></div>
     <div class="div4">Логін</div>
+    <!-- <input type="text" placeholder="Логін" class="login-input">
+    <input type="password" placeholder="Пароль" class="password-input">
+    <button class="login-submit">Увійти</button> -->
   </div>  
 </body>
 </html>
