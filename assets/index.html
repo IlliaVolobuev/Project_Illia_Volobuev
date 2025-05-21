@@ -11,6 +11,7 @@
   <title>Drink2Go – Інтернет-магазин кавових напоїв</title>
   <link rel="stylesheet" href="./css/style.css">
   <script type="module" src="./js/index.js" defer></script>
+  <script src="./js/data.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -40,22 +41,70 @@
   </header>
 
   <main>
-    <section class="slider">
-      <img src="./img/flat-white-img0.png" alt="Декаф Флет Уайт" class="slider-image">
+<section class="slider">
+  <div class="slider-trackk">
+    <!-- Слайд 1 -->
+    <div class="slide active">
+      <img src="./img/flat-white-img0.png" alt="Флет Уайт" class="slider-image">
       <div class="slider-content">
         <span class="badge">Новинка!</span>
-        <h1 class="slider-title">Декаф Флет Уайт</h1>
+        <h1 class="slider-title">Декаф Флэт Уайт</h1>
         <p class="slider-description">
-          Свіжозварена кава без кофеїну з Ефіопії з натуральним фермерським
-          молоком - те, що потрібно для розслаблення після важкого робочого дня
+          Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
         </p>
         <div class="price-container">
           <span class="old-price">295грн</span>
           <span class="current-price">225грн</span>
           <button class="buy-button">Придбати</button>
         </div>
-      </div>    
-    </section>
+      </div>
+    </div>
+
+    <!-- Слайд 2 -->
+    <div class="slide">
+      <img src="./img/slide2.png" alt="Класік Еспресо" class="slider-image">
+      <div class="slider-content">
+        <span class="badge">Новинка!</span>
+        <h1 class="slider-title">Лавандовый Латте</h1>
+        <p class="slider-description">
+          Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+        </p>
+        <div class="price-container">
+          <span class="old-price">285грн</span>
+          <span class="current-price">265грн</span>
+          <button class="buy-button">Придбати</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Слайд 3 -->
+    <div class="slide">
+      <img src="./img/slide3.svg" alt="Карамель Макіато" class="slider-image">
+      <div class="slider-content">
+        <span class="badge">Новинка!</span>
+        <h1 class="slider-title">Тройной Эспрессо</h1>
+        <p class="slider-description">
+          Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+        </p>
+        <div class="price-container">
+          <span class="old-price">395грн</span>
+          <span class="current-price">375грн</span>
+          <button class="buy-button">Придбати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-button prev">◀</button>
+  <button class="slider-button next">▶</button>
+</section>
+<div class="slider-indicators">
+  <button class="slider-indicator active" data-slide="0"></button>
+  <button class="slider-indicator" data-slide="1"></button>
+  <button class="slider-indicator" data-slide="2"></button>
+</div>
+
+
 
     <section class="features">
       <span class="section-badge">Переваги</span>
@@ -184,89 +233,6 @@
         </div>
         <div class="filter-background">
           <div class="products-grid">
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="./img/coffee-can-10.png" alt="Декаф Флет Уайт" class="product-image">
-            <h3 class="product-title">Декаф Флет Уайт</h3>
-            <p class="product-description">
-              Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком
-            </p>
-            <div class="product-footer">
-              <span class="product-price">225грн</span>
-              <button class="add-to-cart">
-                <img src="./img/union6.svg" alt="Додати в кошик">
-                <span>В кошик</span>
-              </button>
-            </div>
           </div>
           </div>
           <div class="pagination">
