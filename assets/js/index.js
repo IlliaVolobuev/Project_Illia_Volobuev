@@ -6,16 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initRange();
   initSlider();
   showFrame1();
-});
 
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Навигация
   const sections = {
     home: document.body,
     catalog: document.querySelector("#catalog"),
@@ -31,8 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function getCurrentSection() {
-    const scrollY = window.scrollY + 200; // зміщення на висоту хедера
-
+    const scrollY = window.scrollY + 200;
     let current = "home";
 
     for (const key in sections) {
@@ -47,20 +38,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateActiveLink() {
     const current = getCurrentSection();
-
     for (const key in navLinks) {
       navLinks[key].classList.remove("active-link");
     }
-
     navLinks[current].classList.add("active-link");
   }
 
   window.addEventListener("scroll", updateActiveLink);
+
+  // Сортировка
+  const sortSelect = document.querySelector(".sort-select");
+  const sortCurrent = document.getElementById("sort-current");
+  const sortOptions = document.querySelector(".sort-options");
+  const productContainer = document.querySelector(".products-grid");
+
+  sortSelect.addEventListener("click", () => {
+    sortOptions.classList.toggle("hidden");
+  });
+
+  function sortProducts(method, productsArray) {
+    let sorted;
+
+    switch (method) {
+      case "az":
+        sorted = [...productsArray].sort((a, b) => a.title.localeCompare(b.title, 'uk'));
+        break;
+      case "price":
+        sorted = [...productsArray].sort((a, b) => a.price - b.price);
+        break;
+      default:
+        sorted = productsArray;
+        break;
+    }
+
+    renderProducts(sorted);
+  }
+
+  sortOptions.querySelectorAll("li").forEach(option => {
+    option.addEventListener("click", (e) => {
+      const sortType = option.dataset.sort;
+      sortCurrent.textContent = option.textContent;
+      sortOptions.classList.add("hidden");
+      
+      // Получаем текущие отфильтрованные продукты
+      const currentProducts = getFilteredProducts();
+      sortProducts(sortType, currentProducts);
+    });
+  });
 });
-
-
-
-
 
 
 
