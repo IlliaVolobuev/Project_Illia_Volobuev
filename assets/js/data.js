@@ -1,41 +1,41 @@
 // const products = [
 //   {
-//     imgSrc: "./img/coffee-can-10.png",
+//     imgSrc: "./assets/img/coffee-can-10.png",
 //     altText: "Декаф Флет Уайт",
 //     title: "Декаф Флет Уайт",
 //     description: `Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком`,
 //     price: "225грн"
 //   },
 //   {
-//     imgSrc: "./img/coffee-can-9.png",
+//     imgSrc: "./assets/img/coffee-can-9.png",
 //     altText: "Лавандовый Латте",
 //     title: "Лавандовый Латте",
 //     description: `Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор`,
 //     price: "265грн"
 //   },
 //   {
-//     imgSrc: "./img/coffee-can-8.png",
+//     imgSrc: "./assets/img/coffee-can-8.png",
 //     altText: "Тройной Эспрессо",
 //     title: "Тройной Эспрессо",
 //     description: `Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость`,
 //     price: "375грн"
 //   },
 //   {
-//   imgSrc: "./img/coffee-can-7.png",
+//   imgSrc: "./assets/img/coffee-can-7.png",
 //   altText: "Молочний Капучино",
 //   title: "Молочний Капучино",
 //   description: `Ніжний і збалансований капучино з добірної арабіки та вершковим молоком, ідеальний для затишного ранку`,
 //   price: "245грн"
 // },
 //   {
-//     imgSrc: "./img/coffee-can-6.png",
+//     imgSrc: "./assets/img/coffee-can-6.png",
 //     altText: "Ванильный Раф",
 //     title: "Ванильный Раф",
 //     description: `Нежный кофе с ванильным ароматом и сливочным вкусом, который подарит вам настоящее наслаждение`,
 //     price: "280грн"
 //   },
 //   {
-//     imgSrc: "./img/coffee-can-5.png",
+//     imgSrc: "./assets/img/coffee-can-5.png",
 //     altText: "Мокко Классик",
 //     title: "Мокко Классик",
 //     description: `Кофе с шоколадным оттенком, сливками и легкой горчинкой — для тех, кто любит классические вкусы`,
@@ -81,7 +81,7 @@
 // Приклад масиву товарів з розширеними полями для фільтрації
 const products = [
   {
-    imgSrc: "./img/coffee-can-10.png",
+    imgSrc: "./assets/img/coffee-can-10.png",
     altText: "Декаф Флет Уайт",
     title: "Декаф Флет Уайт",
     description: `Кава без кофеїну з Ефіопії з <br> натуральним фермерським <br> молоком` ,
@@ -90,7 +90,7 @@ const products = [
     country: "Ефіопія"
   },
   {
-    imgSrc: "./img/coffee-can-9.png",
+    imgSrc: "./assets/img/coffee-can-9.png",
     altText: "Лавандовый Латте",
     title: "Лавандовый Латте",
     description: `Невероятное сочетание перуанской арабики с молоком ламы и лавандой` ,
@@ -99,7 +99,7 @@ const products = [
     country: "Перу"
   },
   {
-    imgSrc: "./img/coffee-can-8.png",
+    imgSrc: "./assets/img/coffee-can-8.png",
     altText: "Тройной Эспрессо",
     title: "Тройной Эспрессо",
     description: `Этот тройной эспрессо из Колумбии мощнее укола адреналина` ,
@@ -108,7 +108,7 @@ const products = [
     country: "Колумбія"
   },
   {
-    imgSrc: "./img/coffee-can-7.png",
+    imgSrc: "./assets/img/coffee-can-7.png",
     altText: "Молочний Капучино",
     title: "Молочний Капучино",
     description: `Ніжний капучино з добірної арабіки та вершковим молоком` ,
@@ -117,7 +117,7 @@ const products = [
     country: "Бразилія"
   },
   {
-    imgSrc: "./img/coffee-can-6.png",
+    imgSrc: "./assets/img/coffee-can-6.png",
     altText: "Флоральна Рослина",
     title: "Флоральна Рослина",
     description: `Легкий рослинний латте з нотками жасмину та овсяним молоком` ,
@@ -126,7 +126,7 @@ const products = [
     country: "Коста-Ріка"
   },
   {
-    imgSrc: "./img/coffee-can-5.png",
+    imgSrc: "./assets/img/coffee-can-5.png",
     altText: "Бразильська Класика",
     title: "Бразильська Класика",
     description: `Справжня класика з бразильських плантацій із вершковим присмаком` ,
