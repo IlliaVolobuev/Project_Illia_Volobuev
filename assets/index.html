@@ -24,10 +24,10 @@
     <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
     <nav class="header-nav">
       <div class="nav-links">
-        <a href="#" class="nav-link">Головна</a>
-        <a href="#catalog" class="nav-link">Каталог</a>
-        <a href="#map" class="nav-link">Доставка</a>
-        <a href="#footer" class="nav-link">Про нас</a>
+        <a href="#" class="nav-link" id="nav-home">Головна</a>
+        <a href="#catalog" class="nav-link" id="nav-catalog">Каталог</a>
+        <a href="#map" class="nav-link" id="nav-map">Доставка</a>
+        <a href="#footer" class="nav-link" id="nav-footer">Про нас</a>
       </div>
       <div class="nav-icons">
         <a href="#" class="nav-link account-link forma-login">
@@ -95,8 +95,8 @@
     </div>
   </div>
 
-  <button class="slider-button prev">◀</button>
-  <button class="slider-button next">▶</button>
+  <button class="slider-button prev"><img src="./img/Vector 1.png" alt=""></button>
+  <button class="slider-button next"><img src="./img/Vector 2 (Stroke).png" alt=""></button>
 </section>
 <div class="slider-indicators">
   <button class="slider-indicator active" data-slide="0"></button>
@@ -143,12 +143,17 @@
         <h2 class="section-title">Каталог кавових напоїв</h2>
         
         <div class="sort-container">
-          <span class="sort-label">Сортування:</span>
-          <div class="sort-select">
-            <span>за замовчуванням</span>
-            <img src="./img/frame-940.svg" alt="Сортування">
-          </div>
-        </div>
+  <span class="sort-label">Сортування:</span>
+  <div class="sort-select">
+    <span id="sort-current">за замовчуванням</span>
+    <img src="./img/frame-940.svg" alt="Сортування">
+    <ul class="sort-options hidden">
+      <li data-sort="default">за замовчуванням</li>
+      <li data-sort="az">від А до Я</li>
+      <li data-sort="price">за ціною</li>
+    </ul>
+  </div>
+</div>
       </div>
       <div class="catalog-content">
         <div class="filter-container">
