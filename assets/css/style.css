@@ -696,7 +696,7 @@ color: #7859cf;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
-  margin-top: 1030px;
+  /*margin-top: 1030px;*/
   margin-left: -360px;
 }
 
