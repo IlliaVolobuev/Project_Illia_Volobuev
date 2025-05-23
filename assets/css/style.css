@@ -588,7 +588,12 @@ color: #7859cf;
   transition: background 0.3s;
   width: 149px;
   height: 40px;
+
+  display: flex;
+  align-items: center;     /* Центр по вертикали */
+  justify-content: center; /* Центр по горизонтали */
 }
+
 
 .primary-button:hover {
   background: #9070ec;
