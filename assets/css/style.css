@@ -49,7 +49,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0px 290px 0px 33px;
-  background: white;
+ background: rgba(255, 255, 255, 0.9); /* белый с 90% непрозрачностью */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -678,19 +678,33 @@ color: #7859cf;
 }
 
 .add-to-cart {
-  width: 141px;
+  width: fit-content; /* адаптируется под контент */
+  min-width: 141px;
   height: 36px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding-left: 26px;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
   color: #ffffff;
   font-size: 0.875rem;
   background-color: #7859cf;
+  border: none;
   border-radius: 4px;
   margin-top: 20px;
   margin-left: 46px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+.add-to-cart:hover {
+  background-color: #6a4fcf; /* чуть темнее */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.add-to-cart:active {
+  background-color: #5b3dcf;
+  transform: translateY(1px);
+}
+
 
 .pagination {
   display: flex;

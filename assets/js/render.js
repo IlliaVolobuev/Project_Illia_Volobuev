@@ -10,7 +10,7 @@ export function renderProducts(productsArray) {
       <div class="product-footer">
         <span class="product-price">${product.price}грн</span>
         <button class="add-to-cart">
-          <img src="./img/union6.svg" alt="Додати в кошик">
+          <img src="./assets/img/union6.svg" alt="Додати в кошик">
           <span>В кошик</span>
         </button>
       </div>
