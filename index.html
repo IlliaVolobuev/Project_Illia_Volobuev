@@ -326,15 +326,20 @@
       </div>
     </div>
   </footer>
-
   <div class="frame-1 no-active">
-    <div class="rectangle-1"></div>
-    <div class="div">Увійти</div>
-    <div class="rectangle-4"></div>
-    <input type="text" placeholder="Логін" class="login-input">
-    <div class="rectangle-42"></div>
-    <input type="password" placeholder="Пароль" class="password-input">
-    <button class="login-submit">Увійти</button>
-  </div>  
+  <form class="cta">
+  <h2>Вхід в акаунт</h2>
+  <label for="phone">Телефон</label>
+  <input class="cta-input" type="tel" placeholder="+38 (___) ___ __ __" id="phone" name="phone" required />
+
+  <label for="password">Пароль</label>
+  <input class="cta-input" type="password" placeholder="Пароль" id="password" name="password" required />
+
+  <label for="email">Пошта</label>
+  <input class="cta-input" type="email" placeholder="example@gmail.com" id="email" name="email" required />
+
+  <button class="cta-btn" type="submit">Увійти</button>
+</form>
+</div>
 </body>
 </html>
