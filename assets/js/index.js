@@ -1,4 +1,4 @@
-import { showFrame1 } from './showFrame.js';
+import { showFrame } from './showFrame.js';
 import { initRange } from './range.js';
 import { initSlider } from './slider.js';
 import { renderProducts } from './render.js';
@@ -10,8 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Инициализация интерфейса
   initRange();
   initSlider();
-  showFrame1();
+ 
   renderProducts(products); // первичный рендер
+ 
+  const formaLogin = document.querySelector(".forma-login");
+
+  formaLogin.addEventListener("click", (e) => {
+    e.preventDefault(); // не переходить по ссылке #
+    showFrame();       // показать/спрятать модалку
+  });
+
 
   // Обработка фильтрации
   document.querySelector(".primary-button").addEventListener("click", () => {
