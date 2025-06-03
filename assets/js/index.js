@@ -1,43 +1,68 @@
 import { showFrame } from './showFrame.js';
 import { initRange } from './range.js';
 import { initSlider } from './slider.js';
-import { renderProducts } from './render.js';
+import { renderPage } from './render.js'; // замість renderProducts
 import { getFilteredProducts, resetFilters } from './filters.js';
 import { sortProducts as sortProductsFn } from './sort.js';
 import { products } from './data.js';
 
+let filteredProducts = [...products]; // Поточний набір товарів
+let currentPage = 1;
+const cardsPerPage = 6;
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Инициализация интерфейса
   initRange();
   initSlider();
- 
-  renderProducts(products); // первичный рендер
- 
-  const formaLogin = document.querySelector(".forma-login");
 
+  renderPage(currentPage, filteredProducts);
+
+  const formaLogin = document.querySelector(".forma-login");
   formaLogin.addEventListener("click", (e) => {
-    e.preventDefault(); // не переходить по ссылке #
-    showFrame();       // показать/спрятать модалку
+    e.preventDefault();
+    showFrame();
   });
 
+  // Кнопки пагінації
+  document.getElementById("prev-page").addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderPage(currentPage, filteredProducts);
+    }
+  });
 
-  // Обработка фильтрации
+  document.getElementById("next-page").addEventListener("click", () => {
+    if (currentPage < Math.ceil(filteredProducts.length / cardsPerPage)) {
+      currentPage++;
+      renderPage(currentPage, filteredProducts);
+    }
+  });
+
+  document.querySelectorAll(".page-button").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      currentPage = index + 1;
+      renderPage(currentPage, filteredProducts);
+    });
+  });
+
+  // Фільтрація
   document.querySelector(".primary-button").addEventListener("click", () => {
-    renderProducts(getFilteredProducts());
+    filteredProducts = getFilteredProducts();
+    currentPage = 1;
+    renderPage(currentPage, filteredProducts);
   });
 
   document.querySelector(".secondary-button").addEventListener("click", () => {
-    resetFilters(renderProducts);
+    resetFilters((resetData) => {
+      filteredProducts = resetData;
+      currentPage = 1;
+      renderPage(currentPage, filteredProducts);
+    });
   });
 
-  // Обработка сортировки
   setupSorting();
-
-  // Обработка меню навигации
   setupNavigation();
 });
 
-// Установка обработки сортировки
 function setupSorting() {
   const sortSelect = document.querySelector(".sort-select");
   const sortCurrent = document.getElementById("sort-current");
@@ -53,13 +78,14 @@ function setupSorting() {
       sortCurrent.textContent = option.textContent;
       sortOptions.classList.add("hidden");
 
-      const filtered = getFilteredProducts();
-      sortProductsFn(sortType, filtered);
+      filteredProducts = getFilteredProducts();
+      sortProductsFn(sortType, filteredProducts);
+      currentPage = 1;
+      renderPage(currentPage, filteredProducts);
     });
   });
 }
 
-// Установка обработки активной ссылки в меню
 function setupNavigation() {
   const sections = {
     home: document.body,
@@ -78,7 +104,6 @@ function setupNavigation() {
   function getCurrentSection() {
     const scrollY = window.scrollY + 200;
     let current = "home";
-
     for (const key in sections) {
       const section = sections[key];
       if (section && section.offsetTop <= scrollY) {
@@ -98,7 +123,3 @@ function setupNavigation() {
 
   window.addEventListener("scroll", updateActiveLink);
 }
-
-
-
-

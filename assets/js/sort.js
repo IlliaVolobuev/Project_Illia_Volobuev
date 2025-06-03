@@ -1,4 +1,4 @@
-import { renderProducts } from './render.js';
+import { renderPage } from './render.js';
 
 export function sortProducts(method, productsArray) {
   let sorted;
@@ -14,5 +14,5 @@ export function sortProducts(method, productsArray) {
       sorted = productsArray;
   }
 
-  renderProducts(sorted);
+  renderPage(1, sorted);
 }
