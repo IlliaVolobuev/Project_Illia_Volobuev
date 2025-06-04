@@ -5,6 +5,7 @@ import { renderPage } from './render.js'; // замість renderProducts
 import { getFilteredProducts, resetFilters } from './filters.js';
 import { sortProducts as sortProductsFn } from './sort.js';
 import { products } from './data.js';
+import { updateLogoText } from './logoSwitch.js';
 
 let filteredProducts = [...products]; // Поточний набір товарів
 let currentPage = 1;
@@ -123,3 +124,27 @@ function setupNavigation() {
 
   window.addEventListener("scroll", updateActiveLink);
 }
+
+// Запускаємо при завантаженні
+document.addEventListener('DOMContentLoaded', updateLogoText);
+
+// І при зміні розміру вікна
+window.addEventListener('resize', updateLogoText);
+
+
+
+
+
+
+
+
+
+
+
+  const burger = document.getElementById('burger');
+  const nav = document.querySelector('.header-nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('nav-open');
+  });
