@@ -14,33 +14,42 @@
       href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.11.3/css/reset.min.css"
     />
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
   <script type="module" src="./assets/js/index.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="header-logo">
-      <span class="logo-drink" data-full="Drink" data-short="D">Drink</span>
-      <img src="./assets/img/_21.svg" alt="Логотип Drink2Go" class="logo-icon">
-      <span class="logo-go" data-full="go" data-short="G">go</span>
+<header class="header">
+  <div class="header-logo">
+    <span class="logo-drink" data-full="Drink" data-short="D">Drink</span>
+    <img src="./assets/img/_21.svg" alt="Логотип Drink2Go" class="logo-icon">
+    <span class="logo-go" data-full="go" data-short="G">go</span>
+  </div>
+  <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
+
+  <div class="menu hamburger9" id="burger" aria-label="Меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="header-nav" id="nav">
+    <div class="nav-links">
+      <a href="#" class="nav-link" id="nav-home">Головна</a>
+      <a href="#catalog" class="nav-link" id="nav-catalog">Каталог</a>
+      <a href="#map" class="nav-link" id="nav-map">Доставка</a>
+      <a href="#footer" class="nav-link" id="nav-footer">Про нас</a>
     </div>
-    <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
-    <nav class="header-nav">
-      <div class="nav-links">
-        <a href="#" class="nav-link" id="nav-home">Головна</a>
-        <a href="#catalog" class="nav-link" id="nav-catalog">Каталог</a>
-        <a href="#map" class="nav-link" id="nav-map">Доставка</a>
-        <a href="#footer" class="nav-link" id="nav-footer">Про нас</a>
-      </div>
-      <div class="nav-icons">
-        <a href="#" class="nav-link account-link forma-login">
-          <img src="./assets/img/user0.svg" alt="Увійти"> Увійти
-        </a>
-        <a href="#" class="nav-link basket-link">
-          <img src="./assets/img/union0.svg" alt="Кошик"> Кошик
-        </a>
-      </div>
-    </nav>
-  </header>
+    <div class="nav-icons">
+      <a href="#" class="nav-link account-link forma-login">
+        <img src="./assets/img/user0.svg" alt="Увійти"> Увійти
+      </a>
+      <a href="#" class="nav-link basket-link">
+        <img src="./assets/img/union0.svg" alt="Кошик"> Кошик
+      </a>
+    </div>
+  </nav>
+</header>
+
 
   <main>
     <section class="slider">

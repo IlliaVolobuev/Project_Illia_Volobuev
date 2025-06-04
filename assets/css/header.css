@@ -1,0 +1,289 @@
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  width: 100%;
+  padding: 22px 47px 22px 40px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 36px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header-description {
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 16px;
+  flex-grow: 1;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 151px;
+}
+
+.nav-links {
+  width: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  line-height: 16px;
+  padding: 2rem 1.25rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: rgba(144, 112, 236, 1);
+  transition: 300ms ease-in;
+}
+
+.nav-link:active {
+  color: rgba(89, 60, 172, 1);
+  background-color: rgba(240, 235, 255, 1);
+}
+
+.active-link {
+  color: rgba(120, 89, 207, 1);
+  border-bottom: 3px solid #7859cf;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.account-link,
+.basket-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Бургер */
+.menu {
+  display: none;
+
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1100;
+  /* выше меню */
+}
+
+.menu span {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background: #424242;
+  transition: all 0.5s ease;
+}
+
+.hamburger9 span {
+  position: absolute;
+  right: 0;
+}
+
+.hamburger9 span:nth-of-type(1) {
+  top: 0;
+  animation-delay: 0.2s;
+}
+
+.hamburger9 span:nth-of-type(2) {
+  top: 18px;
+}
+
+.hamburger9 span:nth-of-type(3) {
+  top: 36px;
+  animation-delay: 0.2s;
+}
+
+.hamburger9.active span:nth-of-type(1) {
+  animation: hamburger9animTop 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.hamburger9.active span:nth-of-type(2) {
+  animation: hamburger9animMiddle 0.75s ease;
+  animation-fill-mode: forwards;
+}
+
+.hamburger9.active span:nth-of-type(3) {
+  animation: hamburger9animBottom 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hamburger9animTop {
+  0% {
+    transform: none;
+  }
+
+  40% {
+    top: 18px;
+    transform: none;
+  }
+
+  100% {
+    top: 18px;
+    transform: rotate(315deg);
+    transform-origin: center center;
+  }
+}
+
+@keyframes hamburger9animMiddle {
+  0% {
+    transform: none;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hamburger9animBottom {
+  0% {
+    transform: none;
+  }
+
+  40% {
+    top: 18px;
+    transform: none;
+  }
+
+  100% {
+    top: 18px;
+    transform-origin: center center;
+    transform: rotate(225deg);
+  }
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 1200px) {
+  .header {
+    padding: 22px 20px;
+  }
+
+  .header-nav {
+    gap: 50px;
+  }
+
+  .nav-links {
+    width: auto;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    height: auto;
+    padding: 15px;
+    align-items: center;
+  }
+  
+
+  .header-description {
+    /* margin-left: 0;
+    text-align: center;
+    margin-bottom: 15px; */
+    display: none;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .nav-icons .nav-link {
+    font-size: 0;
+  }
+
+  .nav-icons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-icons .nav-link img {
+    margin-right: 0;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+}

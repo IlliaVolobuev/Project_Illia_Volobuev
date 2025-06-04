@@ -6,6 +6,7 @@ import { getFilteredProducts, resetFilters } from './filters.js';
 import { sortProducts as sortProductsFn } from './sort.js';
 import { products } from './data.js';
 import { updateLogoText } from './logoSwitch.js';
+import { setupBurgerMenu } from './burgerMenu.js';
 
 let filteredProducts = [...products]; // Поточний набір товарів
 let currentPage = 1;
@@ -133,18 +134,8 @@ window.addEventListener('resize', updateLogoText);
 
 
 
+//Burger
 
-
-
-
-
-
-
-
-  const burger = document.getElementById('burger');
-  const nav = document.querySelector('.header-nav');
-
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    nav.classList.toggle('nav-open');
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  setupBurgerMenu();
+});
