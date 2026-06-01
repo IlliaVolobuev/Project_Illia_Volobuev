@@ -1,12 +1,58 @@
-import { showFrame1 } from './showFrame.js';
+import { initAuth } from './auth.js';
+import { initCart } from './cart.js';
 import { initRange } from './range.js';
 import { initSlider } from './slider.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   initRange();
   initSlider();
-  showFrame1();
+  initAuth();
+  initCart();
+  initMobileMenu();
 });
+
+function closeMobileMenu() {
+  const header = document.querySelector(".header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const backdrop = document.getElementById("menu-backdrop");
+
+  header?.classList.remove("is-open");
+  document.body.classList.remove("menu-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  menuToggle?.setAttribute("aria-label", "Відкрити меню");
+  backdrop?.setAttribute("aria-hidden", "true");
+}
+
+function initMobileMenu() {
+  const header = document.querySelector(".header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const headerNav = document.querySelector(".header-nav");
+  const backdrop = document.getElementById("menu-backdrop");
+
+  if (!header || !menuToggle || !headerNav) return;
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-open");
+    document.body.classList.toggle("menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Закрити меню" : "Відкрити меню");
+    backdrop?.setAttribute("aria-hidden", String(!isOpen));
+  });
+
+  backdrop?.addEventListener("click", closeMobileMenu);
+
+  headerNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  headerNav.querySelectorAll(".forma-login, .basket-link").forEach((btn) => {
+    btn.addEventListener("click", closeMobileMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 992) closeMobileMenu();
+  });
+}
 
 
 

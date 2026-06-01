@@ -15,13 +15,19 @@
 </head>
 <body>
   <header class="header">
-    <div class="header-logo">
-      <span class="logo-drink">Drink</span>
-      <img src="./img/_21.svg" alt="Logo" class="logo-icon">
-      <span class="logo-go">go</span>
-      
+    <div class="header-brand">
+      <div class="header-logo">
+        <span class="logo-drink">Drink</span>
+        <img src="./img/_21.svg" alt="Logo" class="logo-icon">
+        <span class="logo-go">go</span>
+      </div>
+      <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
     </div>
-    <p class="header-description">Інтернет-магазин <br>кавових напоїв</p>
+    <button type="button" class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
     <nav class="header-nav">
       <div class="nav-links">
         <a href="#" class="nav-link" id="nav-home">Головна</a>
@@ -30,15 +36,17 @@
         <a href="#footer" class="nav-link" id="nav-footer">Про нас</a>
       </div>
       <div class="nav-icons">
-        <a href="#" class="nav-link account-link forma-login">
-          <img src="./img/user0.svg" alt="Увійти"> Увійти
-        </a>
-        <a href="#" class="nav-link basket-link">
-          <img src="./img/union0.svg" alt="Кошик"> Кошик
-        </a>
+        <button type="button" class="nav-link account-link forma-login">
+          <img src="./img/user0.svg" alt=""> <span class="account-label">Увійти</span>
+        </button>
+        <button type="button" class="nav-link basket-link">
+          <img src="./img/union0.svg" alt=""> Кошик
+          <span class="cart-count" hidden>0</span>
+        </button>
       </div>
     </nav>
   </header>
+  <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
 
   <main>
 <section class="slider">
@@ -253,7 +261,7 @@
     </section>
 
     <div class="map-container" id="map">
-      <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17034.964372251736!2d18.591694718969315!3d54.40829767875458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd75907cf29c17%3A0x22ec58915629e7ab!2sOlivia%20Star!5e0!3m2!1sru!2spl!4v1747475207714!5m2!1sru!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17034.964372251736!2d18.591694718969315!3d54.40829767875458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd75907cf29c17%3A0x22ec58915629e7ab!2sOlivia%20Star!5e0!3m2!1sru!2spl!4v1747475207714!5m2!1sru!2spl" title="Карта доставки Drink2Go" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
 
   <footer class="footer" id="footer">
@@ -313,18 +321,43 @@
       <div class="developer"><span>Разработано в HTML Academy</span><img src="./img/State=Grey.svg" class="logo_HTML_Academy"></div>
     </div>
   </footer>
-  <div class="frame-1 no-active">
-    <div class="rectangle-1"></div>
-    <div class="div">Увійти</div>
-    <div class="rectangle-4"></div>
-    <div class="div2">Логін</div>
-    <div class="rectangle-42"></div>
-    <div class="div3">Пароль</div>
-    <div class="rectangle-43"></div>
-    <div class="div4">Логін</div>
-    <!-- <input type="text" placeholder="Логін" class="login-input">
-    <input type="password" placeholder="Пароль" class="password-input">
-    <button class="login-submit">Увійти</button> -->
-  </div>  
+  <div class="modal" id="login-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel glass-panel" role="dialog" aria-labelledby="login-modal-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Закрити">&times;</button>
+      <h2 class="modal__title" id="login-modal-title">Увійти</h2>
+      <p class="modal__hint">Демо: логін <strong>user</strong>, пароль <strong>1234</strong></p>
+      <form class="login-form" id="login-form">
+        <label class="modal__field">
+          <span>Логін</span>
+          <input type="text" name="login" autocomplete="username" required placeholder="Ваш логін">
+        </label>
+        <label class="modal__field">
+          <span>Пароль</span>
+          <input type="password" name="password" autocomplete="current-password" required placeholder="••••••••">
+        </label>
+        <p class="login-form__error" id="login-error" hidden></p>
+        <button type="submit" class="primary-button modal__submit">Увійти</button>
+      </form>
+      <div class="logged-in-panel" id="logged-in-panel" hidden>
+        <p class="logged-in-panel__greeting">Вітаємо, <span id="logged-in-name"></span>!</p>
+        <button type="button" class="secondary-button" id="logout-btn">Вийти</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="cart-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel glass-panel modal__panel--cart" role="dialog" aria-labelledby="cart-modal-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Закрити">&times;</button>
+      <h2 class="modal__title" id="cart-modal-title">Кошик</h2>
+      <p class="cart-empty" id="cart-empty">Кошик порожній. Додайте напої з каталогу.</p>
+      <ul class="cart-list" id="cart-list"></ul>
+      <div class="cart-footer" id="cart-footer" hidden>
+        <p class="cart-total">Разом: <strong id="cart-total-sum">0</strong> грн</p>
+        <button type="button" class="primary-button modal__submit" id="cart-checkout">Оформити замовлення</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
